@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import xlrd
 plt.style.use('fivethirtyeight')
 
-data = pd.read_csv(r'C:\Users\saura\OneDrive\Desktop\data-1.csv', usecols=['date','storage'])
+data = pd.read_csv(r'data-1.csv', usecols=['date','storage'])
 
 print(data)
 
@@ -16,7 +16,7 @@ data.set_index(['date'])
 #data['storage'].plot(figsize=(15, 6))
 #plt.show()
 
-p = d = q = range(0, 4)
+p = d = q = range(0, 2)
 pdq = list(itertools.product(p, d, q))
 seasonal_pdq = [(x[0], x[1], x[2], 14) for x in list(itertools.product(p, d, q))]
 
